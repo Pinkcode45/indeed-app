@@ -33,21 +33,23 @@ const Navbar = () => {
           alt="logo" />
         </Link>
 
-        <Link href="/Findjob"><span className="hidden md:flex ml-3 hover:underline underline-offset-[2rem]  ">Find Job</span></Link>
-        <Link href="/Company"><span className='hidden md:flex ml-3 hover:underline underline-offset-[2rem]'>Company reviews</span></Link>
+        <Link href="/Findjob"><span className="hidden md:flex ml-3 hover:underline underline-offset-[2rem] hover:text-[#2557a7]  ">Find Job</span></Link>
+        <Link href="/Company"><span className='hidden md:flex ml-3 hover:underline underline-offset-[2rem] hover:text-[#2557a7]'>Company reviews</span></Link>
       </div>
     
       <div className='flex items-center'>
-          <Link href="/Signin"><span className='hidden md:flex mr-10 font-bold text-[#2557a7] cursor-pointer hover:underline underline-offset-[2rem]'>Sign in</span></Link>
+          <Link href="/Signin"><span className='hidden md:flex mr-10 font-bold text-[#2557a7]  hover:underline underline-offset-[2rem]'>Sign in</span></Link>
           <div></div>
           <Link href="/Employers">
-            <span className='hidden md:flex hover:underline cursor-pointer underline-offset-[2rem]'>Employers/ <span>Post Job</span>
+            <span className='hidden md:flex hover:underline cursor-pointer underline-offset-[2rem] hover:text-[#2557a7]'>Employers/ <span>Post Job</span>
             </span>
           </Link>
-          <Link href=""><button className='flex items-center  text-1xl font-bold bg-blue-600 text-white rounded-lg px-3 py-1 md:hidden' >
-            <span  className='mr-2'><BiSolidUser/></span>
-            Sign in
-          </button></Link>
+          <Link href="/Signin">
+              <button className='flex items-center  text-1xl font-bold bg-blue-600 text-white rounded-lg px-3 py-1 md:hidden' >
+                <span  className='mr-2'><BiSolidUser/></span>
+                  Sign in
+              </button>
+            </Link>
           <FiMenu onClick={()=>setToggle(!toggle)} className="text-2xl ml-2 md:hidden"/>
           <span></span>
       </div>
@@ -64,35 +66,47 @@ const Navbar = () => {
        'fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-10 duration-300'}>
         <AiOutlineClose onClick={()=>setToggle(!toggle)}  size={25} className="absolute mt-4 right-4 md:hidden"/>
 
-          <div className=' flex items-center mt-12 justify-between text-1xl p-4 font-bold md:hidden border-t-2'>
-            <h3>Find jobs</h3>
-            <TbMathGreater/>
-          </div>
+          <Link href='/Findjob'>
+            <div className=' flex items-center mt-16 justify-between text-1xl p-4 font-bold md:hidden border-t-2'>
+              <h3>Find jobs</h3>
+              <TbMathGreater/>
+            </div>
+          </Link>
 
-          <div className=' flex items-center justify-between text-1xl p-4 font-bold md:hidden border-t-2' >
-            <h3>Companys reviews</h3>
-            <TbMathGreater/>
-          </div>
+          <Link href='/Reviews'>
+            <div className=' flex items-center mt-4 justify-between text-1xl p-4 font-bold md:hidden border-t-2' >
+              <h3>Companys reviews</h3>
+              <TbMathGreater/>
+            </div>
+          </Link>
 
-          <div className=' flex items-center justify-between text-1xl p-4 font-bold md:hidden border-t-2'>
-            <h3>Employers</h3>
-            <TbMathGreater/>
-          </div>
+          <Link href='/Employers'>
+            <div className=' flex items-center mt-4 justify-between text-1xl p-4 font-bold md:hidden border-t-2'>
+              <h3>Employers</h3>
+              <TbMathGreater/>
+            </div>
+          </Link>
 
-          <div className=' flex items-center justify-between text-1xl p-4 font-bold md:hidden border-t-2'>
-            <h3>Create your Cv</h3>
-            <TbMathGreater/>
-          </div>
+          <Link href=''>
+            <div className=' flex items-center mt-4 justify-between text-1xl p-4 font-bold md:hidden border-t-2'>
+              <h3>Create your Cv</h3>
+              <TbMathGreater/>
+            </div>
+          </Link>
 
-          <div className=' flex items-center justify-between text-1xl p-4 font-bold border-t-2 md:hidden'>
-            <h3>Change Country</h3>
-            <TbMathGreater/>
-          </div>
+          <Link href=''>
+            <div className=' flex items-center mt-4 justify-between text-1xl p-4 font-bold border-t-2 md:hidden'>
+              <h3>Change Country</h3>
+              <TbMathGreater/>
+            </div>
+          </Link>
 
-          <div className=' flex items-center justify-between text-1xl p-4 font-bold md:hidden border-t-2'>
-            <h3>Help Center</h3>
-            <TbMathGreater/>
-          </div>
+          <Link href='/Helpcenter'>
+            <div className=' flex items-center mt-4 justify-between text-1xl p-4 font-bold md:hidden border-t-2'>
+              <h3>Help Center</h3>
+              <TbMathGreater/>
+            </div>
+          </Link> 
 
       </div>
 

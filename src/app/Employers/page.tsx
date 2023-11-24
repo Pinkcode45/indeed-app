@@ -1,11 +1,14 @@
 import React from 'react';
 import Link from "next/link";
 import Image from 'next/image';
+import Navbar2 from '@/componets/Navbar2';
+import Footer from '@/componets/Footer';
 
 
 const Employerpage = () => {
   return (
     <div  >
+        <Navbar2 />
         <div>
 
             {/* 1st line */}
@@ -259,6 +262,7 @@ const Employerpage = () => {
 
 
         </div>
+        <Footer />
     </div>
   )
 }
